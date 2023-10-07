@@ -25,7 +25,7 @@ jobs:
 
     - name: Log in to Docker Hub
       run: |
-        docker login -u "tinumistry" -p "Welcometomsci@123" 
+        docker login -u "tinumistry" -p "@123" 
         docker push tinmistry/tempcicd:latest
 
       
