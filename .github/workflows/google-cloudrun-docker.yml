@@ -19,7 +19,7 @@ jobs:
     - name: Build Docker image
       run: |
         docker buildx create --use
-        docker build -t tinmistry/tempcicd:1.0 .
+        docker buildx -t tinmistry/tempcicd:1.0 .
       env:
         DOCKER_CLI_AGGREGATE: 1
 
