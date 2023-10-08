@@ -19,13 +19,13 @@ jobs:
     - name: Build Docker image
       run: |
         docker buildx create --use
-        docker build -t tinmistry/tempcicd:latest .
+        docker build -t tinumistry/tempcicd:1.0 .
       env:
         DOCKER_CLI_AGGREGATE: 1
 
     - name: Log in to Docker Hub
       run: |
-        docker login -u "tinumistry" -p "@123" 
-        docker push tinmistry/tempcicd:latest
+        docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+        docker push tinumistry/tempcicd:latest
 
       
